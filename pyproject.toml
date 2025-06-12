@@ -47,9 +47,11 @@ lint = "ruff check youtube_transcript_api"
 precommit.shell = "poe format && poe lint && poe coverage"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.14"
+python = ">=3.9,<3.14"
 requests = "*"
 defusedxml = "^0.7.1"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.3"
 
 [tool.poetry.group.test]
 optional = true
@@ -64,6 +66,9 @@ optional = true
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.8"
+pytest = "^8.4.0"
+pytest-cov = "^6.2.0"
+httpx = "^0.28.1"
 
 [tool.coverage.run]
 source = ["youtube_transcript_api"]
